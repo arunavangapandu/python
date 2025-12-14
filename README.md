@@ -22,8 +22,15 @@ pip install -r requirements.txt
 
 2. **Database Setup**
 
-Ensure you have a PostgreSQL database running. Update the `DATABASE_URL` in `.env` (or set env var).
-Default is: `postgresql+asyncpg://postgres:postgres@localhost:5432/banking_db`
+Ensure you have a PostgreSQL database running.
+
+Copy the example environment file:
+```bash
+cp example.env .env
+```
+
+Update `DATABASE_URL` and `SECRET_KEY` in `.env`.
+Default DB URL is: `postgresql+asyncpg://postgres:postgres@localhost:5432/banking_db`
 
 3. **Run Migrations**
 

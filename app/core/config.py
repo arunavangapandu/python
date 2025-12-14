@@ -7,16 +7,13 @@ class Settings(BaseSettings):
     PROJECT_NAME: str = "Banking API"
     
     # SECURITY
-    SECRET_KEY: str = "CHANGE_THIS_TO_A_SECURE_SECRET_KEY_IN_PRODUCTION"
+    # These must be set in environment variables or .env file
+    SECRET_KEY: str
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
     
     # DATABASE
-    # POSTGRES_SERVER: str
-    # POSTGRES_USER: str
-    # POSTGRES_PASSWORD: str
-    # POSTGRES_DB: str
-    DATABASE_URL: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/banking_db"
+    DATABASE_URL: str
 
     # CORS
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
